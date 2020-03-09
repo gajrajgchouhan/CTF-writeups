@@ -6,7 +6,7 @@
 
 Description : I recently received this signal transmission known as SSTV in a mode called Martian? This technology is all very old so I'm not sure what to do with it. Could you help me out?
 
-The question gives us a signals.wav file. We can open it in Audacity to analyze it or looks at its spectogram.
+The question gives us a signals.wav file. We can open it in Audacity to analyze it or look at its spectogram.
 The problem gives us a hint about something called SSTV.
 If we look it up on the Wikipedia, it is a way to transmitt images in audio form.
 
