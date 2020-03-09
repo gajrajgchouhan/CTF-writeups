@@ -10,14 +10,14 @@ The question gives us a signals.wav file. We can open it in Audacity to analyze 
 The problem gives us a hint about something called SSTV.
 If we look it up on the Wikipedia, it is a way to transmitt images in audio form.
 
-[ ](./images/1framescreen.png)
+![](./images/1framescreen.png)
 
 I then searched for converting this audio signal back to it's Image form on google.
 
 I found [this](https://ourcodeworld.com/articles/read/956/how-to-convert-decode-a-slow-scan-television-transmissions-sstv-audio-file-to-images-using-qsstv-in-ubuntu-18-04) to be a very good guide for it.
 The qsstv program will decode the audio and give us an image with the flag.
 
-[ ](./images/1frame.png)
+![](./images/1frame.png)
 
 ### basics[forensics]
 
@@ -41,7 +41,9 @@ utflag{fil3_ext3nsi0ns_4r3nt_r34l}
 
 Description :A simple image with a couple of twists...
 
-We are given this image [](./Observe_Closely/Griffith_Observatory.png)
+We are given this image
+
+![](./Observe_Closely/Griffith_Observatory.png)
 
 Trying to binwalk the file reveals a Zip file inside the png file.
 ```console
@@ -68,6 +70,6 @@ Description : I found this audio file but I don't think it's any song I've ever 
 
 Opening the file in audacity and turning on spectrograph.
 
-[ ](./images/spectrescreen.png)
+![](./images/spectrescreen.png)
 
 Voila! Flag in the spectrogram.
