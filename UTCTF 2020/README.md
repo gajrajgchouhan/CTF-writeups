@@ -73,3 +73,76 @@ Opening the file in audacity and turning on spectrograph.
 ![](./images/spectrescreen.png)
 
 Voila! Flag in the spectrogram.
+
+### The Legend of Hackerman Part 1
+
+Description : My friend Hackerman tried to send me a secret transmission but I think some of it got messed up in transit. Can you fix it?
+
+When I opened the given file using hexedit since file command basically it is just a data file.
+I noticed that the instead of a magic number for a PNG in start, first 4 bytes were 00 00 00 00.
+I changed them to 89 50 4E 47, the correct magic number.
+```console
+foo@bar:~$ hexedit hackerman.png
+```
+
+![](./images/legend1screen.png)
+
+Changing the bytes will let us view a image of the HACKERMAN Rami Malek.
+
+![](./The_Legend_of_Hackerman_Pt._1/correct.png)
+
+### The Legend of Hackerman Part 2
+
+Description : Ok, I've received another file from Hackerman, but it's just a Word Document? He said that he attached a picture of the flag, but I can't find it...
+
+After running strings on the given docx file, I ran binwalk and extracted everything.
+```console
+foo@bar:~$ binwalk -e Hacker.docx
+```
+
+In a folder called 'media' nested in the extracted folder, I found a image called image23.png which simply had the flag.
+
+![](The_Legend_of_Hackerman_Pt._2/_Hacker.docx.extracted/word/media/image23.png)
+
+### Zero
+
+Description : This file seems to be too large given how much text it contains but I can find zero evidence of the flag. Maybe you'll have better luck than me?
+
+This was the hardest challenge of the forensics and I spent a hell lot of time on this !
+You are given a file named Zero.txt, and this challenge can have a very confusing start very easily. I tried many things like binwalk,file and hexedit in vain.
+
+You have to start paying at the details.
+
+```console
+foo@bar:~$ file zero.txt
+zero.txt: UTF-8 Unicode (with BOM) text, with very long lines, with no line terminators
+```
+
+I tried I opening the text file in Visual Studio Code and found some weird characters.
+
+![](./images/zeroscreen.png)
+
+Challenge must have to do something with these characters ! I thought, and quickly wrote a python script to find these unknown.
+```python
+file = open('zero.txt')
+s = file.read()
+l= []
+s1 = ''
+for i in s:
+    if ord(i) not in range(32,128):
+        l.append(ord(i))
+print(set(l))
+file.close()
+```
+Basically sorting out characters which are not in a-Z.
+
+```
+{8203,8204,8205,8236,65279}
+```
+
+Here if you search for the ascii values, you will found Zero Width characters, a byte due to BOM encoding and a Japanese characters.Now this really confused me.I tried translating the Japanese character which was completely wrong fetching nothing.
+
+I couldn't understand the importance of Zero Width characters. I couldn't complete the challenge, however if you search for Zero Width cryptography. You will find this [decoder](https://330k.github.io/misc_tools/unicode_steganography.html) online.
+Simply pasting the whole file will give us the hidden flag.
+
+```utflag{whyNOT@sc11_4927aajbqk14}```
