@@ -142,7 +142,7 @@ Basically sorting out characters which are not in a-Z.
 
 Here if you search for the ascii values, you will found Zero Width characters, a byte due to BOM encoding and a Japanese characters.Now this really confused me.I tried translating the Japanese character which was completely wrong fetching nothing.
 
-I couldn't understand the importance of Zero Width characters. I couldn't complete the challenge, however if you search for Zero Width cryptography. You will find this [decoder](https://330k.github.io/misc_tools/unicode_steganography.html) online.
+I couldn't understand the importance of Zero Width characters. At the time I couldn't complete the challenge, however if you search for Zero Width cryptography. You will find this [decoder](https://330k.github.io/misc_tools/unicode_steganography.html) online.
 Simply pasting the whole file will give us the hidden flag.
 
 ```utflag{whyNOT@sc11_4927aajbqk14}```
