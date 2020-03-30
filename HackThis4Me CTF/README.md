@@ -302,3 +302,113 @@ kali@kali:~$ xxd -r -p newHexFamily2.txt out
 Out will also be a png file.
 
 Flag: flag{I_d0nT_f0rG3T_endianness}
+
+## Quiz
+
+### RSA 01,02 & 03
+
+Wikipedia page of RSA has useful info for us to work on the challenge.
+
+```python
+from Crypto.Util.number import inverse, long_to_bytes
+
+e = 3
+p = 4547
+q = 5393
+n = p * q
+phi = (p-1) *(q-1)
+d = inverse(e,phi) # decryption key
+
+c = 14150944
+#m = pow(c,d,n)
+m = 322420463
+
+print(repr(long_to_bytes(m)))
+```
+
+## Reverse Engineering
+
+A decompiler like JD-Gui will be helpful in these challenges.
+
+### Lets meet up 01
+
+Description: PyroManiac has organised a meet-up with other hackers to discuss about a recent exploit. This meet-up is in the night as hackers want to protect their idendity but girls and first years boys are trapped in Hostels because of time so they break into cams to disable them and join meet-up. Source code of disabling cams are leaked by a hacker \"Gujju\", use it to disable cams.
+
+Simply open the file or find the admin & password.
+
+Flag : Flag{j4j4_is_e4sY_to_D3C0mp1Le}
+
+### Lets meet up 02
+
+Description: Admin soon find out that cams are disabled and finds out that someone knows the admin password so he changes it. Disable the cams again.
+
+Open the class file in JD-GUI and retrieve the password in text format. Remember to rename the file as GetMeOut2.class
+
+```console
+java GetMeOut2
+```
+
+Flag: Flag{J4J4_1S_V3Ry_E4Sy_to_decOmpiLe}
+
+### Lets meet up 03
+
+Description: Please complete Let's meet up-02 before attempting this.
+Admin is frustated as people finds admin password very easily. So he asked a student Rrockstar99 to code a secure app. He made a app which is uses basic encryption to avoid storing password in readable format. Since he is philomath and didn't want to give too much effort in it. So its very easy to hack into. Disable the cams again.
+
+Note: Rename the file GetMeOut3.class after downloading.
+
+Opening the decompiler, notice that admin is admin but the password is not in text format. It is checked by a function. Convert it in python syntax.
+
+The check function check the length of pass as 28 and xor all the elements in the array with 0x24 to generate ASCII integer, converting into character form we get the password.
+
+```python
+# arrayOfChar = list(paramString) 
+arrayOfInt = [ 
+    112, 108, 5, 87, 123, 5, 87, 123, 105, 20, 
+    119, 80, 123, 119, 23, 103, 81, 118, 65, 123, 
+    116, 100, 119, 119, 115, 20, 118, 96 ]
+for b in range(28):
+    x = arrayOfInt[b] ^ 0x24
+    print(chr(x),end='')
+```
+```
+TH!s_!s_M0St_S3CuRe_P@SSW0RD
+```
+
+Flag : Flag{X0R_is_V3Ry_Us3Fu!!_iN_enCRYpt!0N}
+
+## Binary Exploitation
+
+### Road to Binary 0x00
+
+Run the binary to get the flag.
+
+Flag: FLAG{R04D_T0_BIN4RY_123}
+
+### Road to Binary 0x01
+
+You have to enter the password after running the binary. We can use ltrace on this binary to see the running code of the binary. 
+```console
+kali@kali:~$ ltrace ./Game_test_version 
+__libc_start_main(0x400686, 1, 0x7ffd5c2f73f8, 0x400880 <unfinished ...>
+puts("Enter your lock password"Enter your lock password
+)                 = 25
+__isoc99_scanf(0x40093d, 0x7ffd5c2f7270, 0x7ff650ed5580, 0x7ff650dfb024
+1111
+) = 1
+strcmp("1111", "P1NGU_1S_B3ST_C4RT00N_3V3R")     = -31
+puts("wrong password!!! \nIncident will"...wrong password!!! 
+Incident will be reported to owner
+)     = 54
++++ exited (status 0) +++
+```
+The entered password is compared to this string, so that must be the password ! Let's check it.
+
+```
+P1NGU_1S_B3ST_C4RT00N_3V3R
+```
+
+We can find it using strings command too. :D
+
+
+Flag: FLAG{N3V3R5T0R3P455W0RD1NSIDECODE}
