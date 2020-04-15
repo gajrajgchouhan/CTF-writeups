@@ -124,11 +124,11 @@ Then converting the base64 to image will give the flag.
 
 Hint : 'Hide and seek' in description of the challege.
 
-Use the [diit](https://sourceforge.net/projects/diit/), the Digital Invisible Ink toolkit.
+Use [diit](https://sourceforge.net/projects/diit/), the Digital Invisible Ink toolkit.
 
 ## Crypto
 
-### Snow
+### Pika
 
 Description :Help Detective Pikachu To Find The Flag.
 
@@ -176,21 +176,7 @@ print(repr(long_to_bytes(m)))
 
 Flag : ijctf{34sy_but_n3c3ss4ry}
 
-### Snow
-
-Description : 
-
-SNOW is a great tool for this challenge. Use snow.exe for windows or stegsnow for unix.
-
-```console
-kali@kali:~$ stegsnow -C readme.txt | grep -i ijctf
-flag{Ste6_$n0w!!}
-```
-
-Flag : flag{Ste6_$n0w!!}
-
-
-### RSA
+### Elementary
 
 Description : 
 ```
