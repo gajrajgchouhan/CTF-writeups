@@ -196,3 +196,39 @@ phi = n - (p+q) + 1
 
 That's it !
 
+### Elementary 2.0
+
+Description : 
+```
+n = 1228524079023984047922040067363906041416791718129377992077060351....
+e = 65537
+c = 5507873573592575050205818191630956987844637453238139151593032621....
+p - q = 7020977347415578345778516373471970303823603998941879908879049839....
+```
+Now we are given p - q instead !
+Well, we can let the big number be a
+So,
+```python
+# p - q = a
+# p + q = y
+# pq = n
+y = a**2 + 4*n
+y = 4919025728387228460759400479299255225527456504188532705409312948.....
+
+# Using gympy to find the square root
+
+# import gmpy2
+# n = gmpy2.mpz(y)
+# gmpy2.get_context().precision=2048
+# z = gmpy2.sqrt(n)
+# print(int(z))
+
+z = 2217887672626192415295431503333079770904135578956109188895898138....
+
+phi = n - z + 1
+d = inverse(e,phi) # decryption key
+
+m = pow(c,d,n)
+
+print(repr(long_to_bytes(m)))
+```
