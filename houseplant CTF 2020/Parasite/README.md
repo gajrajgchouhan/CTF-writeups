@@ -6,7 +6,7 @@ we should take two spaces to seperate syllables and one space for separating wor
 
 JDU MEK KDF PUF PTK JEF LU GEUK CHK KUW FU SE
 
-Now I used a korean keyboard I found online to write the Hangul characters.
+Now I used a korean keyboard I had found online to write the Hangul characters.
 [https://www.branah.com/korean](https://www.branah.com/korean)
 
 This is what I got -

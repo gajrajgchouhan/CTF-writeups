@@ -189,8 +189,9 @@ e = 0x10001
 Modified RSA, you can't factor n in factordb.com ;)
 But you are given p+q.
 
-phi = (p - 1)*(q - 1)
-We can rearrange the totient func. or p and q.
+phi = (p - 1) * (q - 1)
+
+We can rearrange the totient func or p and q.
 
 phi = n - (p+q) + 1
 

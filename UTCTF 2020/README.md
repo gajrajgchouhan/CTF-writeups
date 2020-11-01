@@ -12,7 +12,7 @@ If we look it up on the Wikipedia, it is a way to transmitt images in audio form
 
 ![](./images/1framescreen.png)
 
-I then searched for converting this audio signal back to it's Image form on google.
+I then searched for converting this audio signal back to it's image form on google.
 
 I found [this](https://ourcodeworld.com/articles/read/956/how-to-convert-decode-a-slow-scan-television-transmissions-sstv-audio-file-to-images-using-qsstv-in-ubuntu-18-04) to be a very good guide for it.
 The qsstv program will decode the audio and give us an image with the flag.
@@ -140,7 +140,7 @@ Basically sorting out characters which are not in a-Z.
 {8203,8204,8205,8236,65279}
 ```
 
-Here if you search for the ascii values, you will found Zero Width characters, a byte due to BOM encoding and a Japanese characters.Now this really confused me.I tried translating the Japanese character which was completely wrong fetching nothing.
+Here if you search for the ascii values, you will found Zero Width characters, a byte due to BOM encoding and a Japanese characters. Now this really confused me.I tried translating the Japanese character which was completely wrong, fetching nothing.
 
 I couldn't understand the importance of Zero Width characters. At the time I couldn't complete the challenge, however if you search for Zero Width cryptography. You will find this [decoder](https://330k.github.io/misc_tools/unicode_steganography.html) online.
 Simply pasting the whole file will give us the hidden flag.

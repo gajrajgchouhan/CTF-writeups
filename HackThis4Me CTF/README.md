@@ -15,7 +15,7 @@ question : PNG Image Data
 
 Open it in a Image Viewer to get the flag.
 
-Flag : flag{EXTENSIONS_ARE_A_LIE}
+Flag : `flag{EXTENSIONS_ARE_A_LIE}`
 
 ### Mein Fuhrer
 
@@ -29,7 +29,7 @@ flag{y0u_F0unD_3x1F_D@t@_VuLn3r@81L1tY}
 
 ```
 
-Flag : flag{y0u_F0unD_3x1F_D@t@_VuLn3r@81L1tY}
+Flag : ``flag{y0u_F0unD_3x1F_D@t@_VuLn3r@81L1tY}``
 
 ### Mein Fuhrer Returns
 
@@ -44,7 +44,7 @@ kali@kali:~$ convert fuhrer1.jpg fuhrer2.jpg -fx "(((255*u)&(255*(1-v)))|((255*(
 ```
 ![](./Forensics/Mein-Fuhrer-Returns/solved.bmp)
 
-Flag : flag{y0uAr3oNh0n0uryM3m83rOfTH3f0urtHR31CH}
+Flag : ``flag{y0uAr3oNh0n0uryM3m83rOfTH3f0urtHR31CH}``
 
 ### Bro who is this?
 
@@ -57,7 +57,7 @@ This key can be used with steghide to extract a hidden zip file.
 kali@kali:~$ steghide extract -sf Identify_me.jpeg
 ```
 
-Flag : flag{HeY_Y0U_f0UND_M3}
+Flag : ``flag{HeY_Y0U_f0UND_M3}``
 
 ### Sensory Overload
 
@@ -65,7 +65,7 @@ Description : Sceptical of probable eavesdropping issues, pyromaniac decided to 
 
 I tried viewing the spectogram of audio file and got the flag.
 
-Flag : flag{V15uAl153Aud10}
+Flag : ``flag{V15uAl153Aud10}``
 
 ### Are_You_Watching_Closely
 
@@ -95,7 +95,7 @@ kali@kali:~$ zbarimg qr.png
 QR-Code:flag{1F_y0U_l0oK_c1Os3lY_EV3rY7h1N9_i5_1s_4nD_0s}
 ```
 
-Flag : {1F_y0U_l0oK_c1Os3lY_EV3rY7h1N9_i5_1s_4nD_0s}
+Flag : `{1F_y0U_l0oK_c1Os3lY_EV3rY7h1N9_i5_1s_4nD_0s}`
 
 Edit : Here is a similiar question https://github.com/chaocipher/Writeups/blob/master/B01lers%20CTF%202020.pdf
 
@@ -106,7 +106,7 @@ Description : The college authorities are making it harder and harder for PyroMa
 Doing binwalk and extracting two images from given file.
 We xor both the pictures to get the flag.
 
-Flag : FLAG{X0R_1S_P0W3RFUL}
+Flag : `FLAG{X0R_1S_P0W3RFUL}`
 
 ### passwd nahi pata
 
@@ -118,7 +118,7 @@ Still grizzly didn't know what is the use of this secret key. :p
 
 Extract a flag.txt file using wireshark.
 
-Flag : FLAG{ProXy_sucksss}
+Flag : `FLAG{ProXy_sucksss}`
 
 ### Dil toot gya?
 
@@ -130,7 +130,7 @@ Again extract all the files using binwalk and you will find a file containing fl
 kali@kali:~$ binwalk outputfiles.pcap -D=".*"
 ```
 
-Flag : FLAG{AP_is_amazing}
+Flag : `FLAG{AP_is_amazing}`
 
 
 ## Cryptography
@@ -148,7 +148,7 @@ question : PNG Image Data
 
 Open it in a Image Viewer to get the flag.
 
-Flag : flag{EXTENSIONS_ARE_A_LIE}
+Flag : `flag{EXTENSIONS_ARE_A_LIE}`
 
 ### Railway Crossing
 
@@ -156,7 +156,7 @@ Description : Grizzly and n00bie are at the Railway Station ready to solve the n
 
 This is [rail fence cipher](https://www.dcode.fr/rail-fence-cipher).
 
-Flag : FLAG{R0W5@NDC0LUMN5}
+Flag : `FLAG{R0W5@NDC0LUMN5}`
 
 ### Am I safe?
 
@@ -164,7 +164,7 @@ Description : MeeSeeks uses some form of SHA encryption for their passwords. Pyr
 
 We can find the decrypted text in a public database like md5encrypt.net
 
-Flag : flag{hello_world}
+Flag : `flag{hello_world}`
 
 ## General Skills
 
@@ -180,7 +180,7 @@ a = [chr(int(i)) for i in a]
 print(''.join(a))
 ```
 
-Flag : Flag{4SCII_Is_4_Li3}
+Flag : `Flag{4SCII_Is_4_Li3}`
 
 ### My Base isn't strong
 
@@ -189,7 +189,7 @@ Message: RmxhZ3tDME52M1JzITBuX0QwM3NOJ1RfU3QwcF9NM30=
 
 This is a base64 string, you can decode this from online tools available.
 
-Flag : Flag{C0Nv3Rs!0n_D03sN'T_St0p_M3}
+Flag : `Flag{C0Nv3Rs!0n_D03sN'T_St0p_M3}`
 
 ### Grep my hands forever
 
@@ -203,7 +203,7 @@ flag{I_use_grep_cuz_ctrl+f_sucks}
 And death's pale flag is not advanced there.
 ```
 
-Flag : flag{I_use_grep_cuz_ctrl+f_sucks}
+Flag : `flag{I_use_grep_cuz_ctrl+f_sucks}`
 
 
 ### Networking Kitty
@@ -267,7 +267,7 @@ kali@kali:~$ xxd -r -p thehexfamily image.png
 ```
 The image has the flag. Read [this](https://stackoverflow.com/questions/7826526/transform-a-hex-info-to-binary-using-linux-command) for converting hex to binary files.
 
-Flag : flag{mspaintrocks}
+Flag : `flag{mspaintrocks}`
 
 ### The hex family 2
 
@@ -336,7 +336,7 @@ Description: PyroManiac has organised a meet-up with other hackers to discuss ab
 
 Simply open the file or find the admin & password.
 
-Flag : Flag{j4j4_is_e4sY_to_D3C0mp1Le}
+Flag : `Flag{j4j4_is_e4sY_to_D3C0mp1Le}`
 
 ### Lets meet up 02
 
@@ -375,7 +375,7 @@ for b in range(28):
 TH!s_!s_M0St_S3CuRe_P@SSW0RD
 ```
 
-Flag : Flag{X0R_is_V3Ry_Us3Fu!!_iN_enCRYpt!0N}
+Flag : `Flag{X0R_is_V3Ry_Us3Fu!!_iN_enCRYpt!0N}`
 
 ## Binary Exploitation
 

@@ -83,7 +83,7 @@ r.interactive()
 
 ### Chord encoder
 
-So someone as encoded each character of his song with a chord. We can do decoded this, we know what each character would look like in a chord.txt (list type object "chord" in the code). What we can do is, we can made a empty variable and keeping try all the printable characters (from the hint) and if it matches, we can add it to a variable flag. There was one issue with this code that, I had to replace "M" with underscore, as they both end with same number (0 afai remeber) and same with "D".
+So someone has encoded each character of his song with a chord. We can decode this, we know what each character would look like in a chord.txt (list type object "chord" in the code). What we can do is, we can made a empty variable and keep trying all the printable characters (from the hint) and if it matches, we can add it to a variable flag. There was one issue with this code that, I had to replace "M" with underscore, as they both end with same number (0 afaik remember) and same with "D".
 
 ```python
 import string
