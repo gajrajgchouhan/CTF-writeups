@@ -18,13 +18,13 @@
 
 - We are also given n, e and `*1e-6` in the question.
 
-- So decrypt the data using RSA, and multiply with `1e-6` to get latitude and longitude of `Louvre Musuem` which the answer.
+- So decrypt the data using RSA, and multiply with `1e-6` to get latitude and longitude of `Louvre Musuem` which is the answer.
 
 ### DNA
 
 - Clearly we are given the DNA cipher.
 
-- We have to search for some of the DNA cipher, after googling for a bit I found [this](https://github.com/ctfs/write-ups-2016/tree/master/qiwi-infosec-ctf-2016/crypto/3-100)
+- We have to search for some variant of the DNA cipher, after googling for a bit I found [this](https://github.com/ctfs/write-ups-2016/tree/master/qiwi-infosec-ctf-2016/crypto/3-100)
 
 - Then used a OCR, and used a python script to get a flag.
 
@@ -38,7 +38,7 @@
 
 - As you can see the 'dashes' and 'dots' in the 3rd row.
 
-- Write the code on paper and then decode it on CyberChef!
+- Write the code and then decode it on CyberChef!
 
 ### Hash Browns
 
