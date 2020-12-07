@@ -1,8 +1,8 @@
-## b00t2root CTF
+# b00t2root CTF
 
 - Writeup (Credits to my team!)
 
-#### Try Try Don't Cry
+### Try Try Don't Cry
 
 - Decode from hex and base64 using cyberchef
 - We get a hex value (035e44154106060c17181b)
@@ -12,7 +12,7 @@
 - We get `antasticccf`, now bring `f` to front as the 11th character.
 - Flag : `b00t2root{fantasticcc}`
 
-#### Counting Doors
+### Counting Doors
 
 - The number of open doors changed when there is a prime number
 - So find number of prime numbers b/w 1 and N
@@ -21,7 +21,7 @@
 - So using wolframaplha will be better.
 - Flag : `b00t2root{947839295365139044}`
 
-#### String Q (Couldn't remember the name)
+### String Q (Couldn't remember the name)
 
 - Implement the algorithm in a function
 - Here we will use the algorithm on dummy data (array) made up of indices of characters of original data.
@@ -29,7 +29,7 @@
 - And get the original data.
 - Flag : `b00t2root{@The_Director_is_the_bot}`
 
-#### Active Directory
+### Active Directory
 
 - just a active directory exploit
 - unzip the archive, and decrypt the password in groups.xml 
@@ -39,7 +39,7 @@
 - Use this ruby script for decoding cPassword
 https://raw.githubusercontent.com/BustedSec/gpp-decrypt/master/gpp-decrypt.rb
 
-#### Osint 1-3
+### Osint 1-3
 
 - Instagram : `redjohn190989`
 - We get a morse code.
@@ -59,7 +59,7 @@ Maybe going WAYBACK can help you out.```
 - Reddit : https://pastebin.com/LBV5BvEN
 - https://www.reddit.com/user/redjohn190989/comments/k3987y/serious_investigation/
 
-#### Johnny Johnny
+### Johnny Johnny
 
 - Zip has a file called `PagesOut`
 - if we search the file name it can be found on the internet
@@ -69,7 +69,7 @@ Maybe going WAYBACK can help you out.```
 - Will Update this later
 - https://x3ero0.tech/posts/plaintext_attack_on_zip_legacy_crypto/
 
-#### Vulnerable Adventure 1-2
+### Vulnerable Adventure 1-2
 
 - Since game used py file on our machine
 - We can change the py file, to get the flag
@@ -81,11 +81,11 @@ Maybe going WAYBACK can help you out.```
 - For Part 2
 - Set the dummyflag
 
-#### PCap Tracing
+### PCap Tracing
 
 - https://github.com/DarkArmy-ctf/ctf-writeups/tree/master/boot2root/Forensics/PCAP_Tracing
 
-#### BuggyPhp
+### BuggyPhp
 
 - we are given a web page which shows 
  ![](./buggyphp/cropped)
